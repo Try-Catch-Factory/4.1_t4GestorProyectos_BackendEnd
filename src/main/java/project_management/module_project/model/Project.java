@@ -1,15 +1,12 @@
 package project_management.module_project.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
-@Entity
+@Entity (name="Projects")
 public class Project {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
+    @Column(name = "id_project")
     private int id;
     private String name;
     private String description;
